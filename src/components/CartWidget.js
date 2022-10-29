@@ -3,6 +3,7 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
 '& .MuiBadge-badge': {
@@ -13,12 +14,25 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 },
 }));
 
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: "#f2f2fc"
+        },
+        secondary: {
+            main: "#b30c0b"
+        }
+    }
+})
+
 export default function CustomizedBadges() {
     return (
-        <IconButton aria-label="cart">
-            <StyledBadge badgeContent={4} color="secondary">
-                <ShoppingCartIcon />
-            </StyledBadge>
-        </IconButton>
+        <ThemeProvider theme={theme}> 
+            <IconButton aria-label="cart" color="primary">
+                <StyledBadge badgeContent={4} color="secondary">
+                    <ShoppingCartIcon sx={{fontSize: "2.2rem"}}/>
+                </StyledBadge>
+            </IconButton>
+        </ThemeProvider>
     );
 }
