@@ -10,12 +10,12 @@
   font-size: 3rem;
 }
 
-h2 {
+.sub_titulo {
   text-align: center;
 }
 
 .nav-bar {
-  background-image: url("./images/nav-bar/navbar-bg.png");
+  background-image: url("./images/inicio/navbar-bg.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -168,7 +168,108 @@ li a:hover .basket-ball {
 /* Productos */
 
 .section_card {
-    width: 20rem;
-    margin-left: 10px;
-    /* flex-wrap: wrap; */
+    width: 18rem;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset, rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.section_card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.item_detail {
+  margin-left: 40px;
+}
+
+.item_detail_title {
+  font-size: 2.2rem;
+}
+
+.item_detail_price {
+  font-size: 2rem;
+}
+
+.item_detail_description {
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+
+/* Seccion de iconos */
+
+.icon_section {
+  background-color: #0a0a0c;
+  width: 100%;
+  height: 300px;
+}
+
+.icon_section p {
+  color: #f2f2fc;
+  text-align: center;
+  width: 400px;
+}
+
+.icon_section h3 {
+  font-size: 1.5rem;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: #f2f2fc;
+}
+
+.icon_color {
+  color:#b30c0b;
+  font-size: 2.5rem;
+  display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+.icon_margin {
+  margin-top: 90px;
+}
+
+
+/* Seccion Nosotros */
+
+.us_section_bg {
+  background-image: url("./images/inicio/lebron3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
+}
+
+.us_font {
+  color: #f2f2fc;
+}
+
+.us_section {
+  background-color: #0a0a0c;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.us_container {
+  flex-direction: column;
+  text-align: center;
+  width: 800px;
+}
+
+.us_container h2 {
+  color: #f2f2fc;
+  font-family: 'Merriweather', serif;
+}
+
+.us_container p {
+  color: #f2f2fc;
+}
+
+.us_container h3 {
+  color: #f2f2fc;
+  font-family: 'Merriweather', serif;
 }

@@ -1,6 +1,6 @@
 import Item from "./Item";
 import { customFetch } from "../utilities/customFetch";
-import {products} from "../utilities/products";
+import { products } from "../utilities/products";
 import { useEffect, useState } from "react";
 
 const ItemList = () => {
@@ -14,7 +14,7 @@ const ItemList = () => {
 
     return (
         <>
-            <section className="container d-flex mt-5">
+            <section className="container d-flex justify-content-around flex-wrap">
             {
                 datos.map(item => (
                     <Item 
