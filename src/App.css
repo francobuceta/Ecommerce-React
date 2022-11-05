@@ -5,6 +5,10 @@
   font-family:'Roboto Slab', serif;
 }
 
+body {
+  background-color: #eeeeee;
+}
+
 .main_titulo {
   text-align: center;
   font-size: 3rem;
@@ -14,18 +18,14 @@
   text-align: center;
 }
 
-.nav-bar {
-  background-image: url("./images/inicio/navbar-bg.png");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 700px;
+.navbar_bg {
+  background-color: #0a0a0c;
+  height: 10rem; /* Achico navbar para que pueda entrar el banner */
 }
 
-nav a img {
+.nav_logo {
   width: 130px;
-  height: 130px;
+  height: 120px;
 }
 
 .nav-links {
@@ -33,26 +33,36 @@ nav a img {
   font-family: 'Alfa Slab One', cursive;
   font-size: 1.3rem;
   font-weight: 100;
+  text-decoration: none;
 }
 
-.navbar_text {
-  margin-top: 60px;
-  right: 50px;
+
+/* Banner */
+
+.banner_bg{
+  background-image: url("./images/inicio/navbar-bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
+}
+
+.banner_text {
   color: #f2f2fc;
+  flex-direction: column;
 }
 
-.navbar_text h1 {
+.banner_text h1 {
   font-family: 'Alfa Slab One';
   font-size: 4rem;
   font-style: italic;
   color: #b30c0b;
 }
 
-.navbar_text p {
+.banner_text p {
   font-size: 1.5rem;
   font-weight: 500;
 }
-
 
 /* Pelota de Basquet */
 
@@ -119,13 +129,90 @@ nav a img {
   left: 70%;
 }
 
-li a:hover {
+li div:hover {
   color: #f2f2fc!important;
 }
 
 li a:hover .basket-ball {
   transform:scaleX(1);
   animation: example 0.5s alternate infinite ease-in;
+}
+
+/* Seccion de iconos */
+
+.icon_section {
+  background-color: #f2f2fc;
+  width: 100%;
+  height: 200px;
+}
+
+.icon_section p {
+  color: #0a0a0c;
+  text-align: center;
+  width: 400px;
+}
+
+.icon_section h3 {
+  font-size: 1.5rem;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: #0a0a0c;
+}
+
+.icon_color {
+  color:#b30c0b;
+  font-size: 2.5rem;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+.icon_margin {
+  margin-top: 20px;
+}
+
+
+/* Seccion Nosotros */
+
+.us_section_bg {
+  background-image: url("./images/inicio/lebron3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
+}
+
+.us_font {
+  color: #f2f2fc;
+}
+
+.us_section {
+  background-color: #0a0a0c;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.us_container {
+  flex-direction: column;
+  text-align: center;
+  width: 800px;
+}
+
+.us_container h2 {
+  color: #f2f2fc;
+  font-family: 'Merriweather', serif;
+}
+
+.us_container p {
+  color: #f2f2fc;
+}
+
+.us_container h3 {
+  color: #f2f2fc;
+  font-family: 'Merriweather', serif;
 }
 
 
@@ -179,6 +266,10 @@ li a:hover .basket-ball {
   transition: 0.5s;
 }
 
+.card_bg {
+  background-color: #eeeeee!important;
+}
+
 .item_detail {
   margin-left: 40px;
 }
@@ -196,80 +287,68 @@ li a:hover .basket-ball {
   margin-top: 30px;
 }
 
-
-/* Seccion de iconos */
-
-.icon_section {
+.btn_detalle {
+  border: none;
+  margin-right: 25px;
+  box-shadow: 0 0 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  height: 3rem;
+  width: 7rem;
   background-color: #0a0a0c;
-  width: 100%;
-  height: 300px;
-}
-
-.icon_section p {
-  color: #f2f2fc;
-  text-align: center;
-  width: 400px;
-}
-
-.icon_section h3 {
-  font-size: 1.5rem;
-  font-family: 'Merriweather', serif;
-  text-align: center;
   color: #f2f2fc;
 }
 
-.icon_color {
-  color:#b30c0b;
+.btn_agregar {
+  border: none;
+  box-shadow: 0 0 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  height: 3rem;
+  width: 7rem;
+  background-color: #b30c0b;
+  color: #f2f2fc;
+}
+
+
+/* Footer */
+
+.footer_bg {
+  background-color: #0a0a0c;
+}
+
+.footer_menu {
+  color: #eeeeee;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer_menu:hover {
+  color: #780a07;
+}
+
+.footer_menu-border {
+  border-right: 2px solid #eeeeee;
+}
+
+.footer_wp-icon {
+  color:#eeeeee;
   font-size: 2.5rem;
-  display: block;
-    margin: auto;
-    padding: 10px;
+  margin-right: 20px;
 }
 
-.icon_margin {
-  margin-top: 90px;
+.footer_wp-icon:hover {
+  color: #780a07;
 }
 
-
-/* Seccion Nosotros */
-
-.us_section_bg {
-  background-image: url("./images/inicio/lebron3.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 700px;
+.footer_ig-icon {
+  color: #eeeeee;
+  font-size: 2.5rem;
 }
 
-.us_font {
-  color: #f2f2fc;
-}
-
-.us_section {
-  background-color: #0a0a0c;
-  width: 100%;
-  height: 500px;
-  display: flex;
-  align-items: center;
-}
-
-.us_container {
-  flex-direction: column;
-  text-align: center;
-  width: 800px;
-}
-
-.us_container h2 {
-  color: #f2f2fc;
-  font-family: 'Merriweather', serif;
-}
-
-.us_container p {
-  color: #f2f2fc;
-}
-
-.us_container h3 {
-  color: #f2f2fc;
-  font-family: 'Merriweather', serif;
+.footer_ig-icon:hover {
+  color: #780a07;
 }

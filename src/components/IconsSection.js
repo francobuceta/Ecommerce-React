@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
-import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
-import { faBoxArchive } from '@fortawesome/free-solid-svg-icons';
+import { faCreditCard, faBoxArchive  } from '@fortawesome/free-solid-svg-icons';
 
 const IconSection = () => {
     return (

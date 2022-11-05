@@ -1,31 +1,19 @@
 import Item from "./Item";
-import { customFetch } from "../utilities/customFetch";
-import { products } from "../utilities/products";
-import { useEffect, useState } from "react";
 
-const ItemList = () => {
-    const [datos, setDatos] = useState([]);
-
-    useEffect(() => {
-        customFetch(2000, products)
-            .then(response => setDatos(response))
-            .catch(err => console.log(err))
-    }, [])
-
+const ItemList = ({ items }) => {
     return (
-        <>
-            <section className="container d-flex justify-content-around flex-wrap">
+        <section className="container d-flex justify-content-evenly flex-wrap mb-5">
             {
-                datos.map(item => (
+                items.map(item => (
                     <Item 
                     key = {item.id}
                     title = {item.title}
                     price = {item.price}
-                    picture = {item.pictureUrl} />
+                    picture = {item.pictureUrl}
+                    id = {item.id} />
                 )) 
             }  
-            </section>
-        </>
+        </section>
     )
 }
 

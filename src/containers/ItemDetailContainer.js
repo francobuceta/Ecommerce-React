@@ -2,32 +2,22 @@ import { useState, useEffect } from "react";
 import ItemDetail from "../components/ItemDetail";
 import { products } from "../utilities/products";
 import { customFetch } from "../utilities/customFetch";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-    const [datos, setDatos] = useState([]);
+    const [dato, setDato] = useState([]);
+    const { idItem } = useParams();
 
     useEffect(() => {
-        customFetch(2000, products) 
-        .then(response => setDatos(response))
+        customFetch(2000, products.find(item => item.id == idItem)) 
+        .then(response => setDato(response))
         .catch(err => console.log(err))
     }, []) 
 
     return (
-        <>
-            <section className="container">
-            {
-                datos.filter(elem => elem.id === "003")
-                .map( item => (
-                    <ItemDetail 
-                    key = {item.id}
-                    title = {item.title}
-                    price = {item.price}
-                    description = {item.description}
-                    picture = {item.pictureUrl} /> 
-                ))
-            }  
-            </section>
-        </>
+        <section className="container">
+            <ItemDetail item={dato} /> 
+        </section> 
     )
 }
 

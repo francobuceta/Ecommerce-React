@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const UsSection = () => {
     return (
         <>
@@ -24,7 +26,7 @@ const UsSection = () => {
                         <p>Todos nuestros productos son originales, hacemos envíos a todo el país, y 
                         ofrecemos una <b>garantía total asegurada de 3 meses.</b></p>
                     <h3>¡BIENVENIDO/A A LA FAMILIA!</h3>
-                    <button>Ir a la tienda</button>
+                    <Link to="/category/all"><button>Ir a la tienda</button></Link>
                 </div>
             </section>
         </>
