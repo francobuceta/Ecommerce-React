@@ -1,27 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const ItemCount = () => {
-    const [initial, setInitial] = useState(1);
+const ItemCount = ({ stock, initial, onAdd }) => {
+    const [count, setCount] = useState(parseInt(initial));
+
+    useEffect(() => {
+        setCount(initial);
+    },[]);
     
-    const onAdd = () => {
-        if (initial < 5) setInitial(initial + 1);
-        console.log(initial);
+    const increment = () => {
+        if (count < stock) setCount(count + 1);
     }
 
-    const onRemove = () => {
-        if (initial > 1) setInitial(initial - 1);
-        console.log(initial);
+    const decrement = () => {
+        if (count > initial) setCount(count - 1);
     }
 
     return (
-        <div className="d-flex justify-content-center mt-5">
+        <div className="d-flex mt-5">
             <div className="button_container">
-                <button onClick={onRemove}>-</button>
-                <span>{initial}</span>
-                <button onClick={onAdd}>+</button>
+                <button onClick={decrement}>-</button>
+                <span>{count}</span>
+                <button onClick={increment}>+</button>
             </div>
             <div>
-                <button className="button_add">Agregar al carrito</button>
+                {            
+                    stock && count ?
+                    <button className="button_add" onClick={() => onAdd(count)}>Agregar al carrito</button>
+                    : <button className="button_add-inactive" disabled>Agregar al carrito</button>
+                }
+                
             </div>
         </div>
     )

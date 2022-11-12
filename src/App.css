@@ -5,22 +5,23 @@
   font-family:'Roboto Slab', serif;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
   background-color: #eeeeee;
-}
-
-.main_titulo {
-  text-align: center;
-  font-size: 3rem;
-}
-
-.sub_titulo {
-  text-align: center;
+  scroll-behavior: smooth;
 }
 
 .navbar_bg {
   background-color: #0a0a0c;
-  height: 10rem; /* Achico navbar para que pueda entrar el banner */
+  height: 6rem; /* Achico navbar para que pueda entrar el banner */
+}
+
+.navbar_bg-store {
+  background-color: #0a0a0c;
+  height: 9rem;
 }
 
 .nav_logo {
@@ -183,14 +184,26 @@ li a:hover .basket-ball {
   height: 700px;
 }
 
+.us_texto {
+  margin-top: -50px;
+  text-align: center;
+}
+
+.us_texto2 {
+  margin-top: 200px;
+  text-align: center;
+}
+
 .us_font {
-  color: #f2f2fc;
+  color: #b30c0b;
+  font-size: 3rem;
+  font-family: 'Alfa Slab One', cursive;
 }
 
 .us_section {
-  background-color: #0a0a0c;
+  background-color: #f2f2fc;
   width: 100%;
-  height: 500px;
+  height: 550px;
   display: flex;
   align-items: center;
 }
@@ -199,22 +212,86 @@ li a:hover .basket-ball {
   flex-direction: column;
   text-align: center;
   width: 800px;
+  margin-top: 40px;
+  background-color: #c9706c;
+  padding: 20px;
+  border-radius: 20%;
 }
 
 .us_container h2 {
-  color: #f2f2fc;
+  color: #0a0a0c;
   font-family: 'Merriweather', serif;
+  text-decoration: underline;
 }
 
 .us_container p {
-  color: #f2f2fc;
+  color: #0a0a0c;
 }
 
 .us_container h3 {
-  color: #f2f2fc;
+  color: #0a0a0c;
   font-family: 'Merriweather', serif;
+  letter-spacing: 2px;
 }
 
+/* Boton "ir a tienda" */
+
+.btn_store {
+  width: 180px;
+  height: 50px;
+  position: relative;
+  display: inline-flex;
+	align-items: center;
+	justify-content: center;
+  transition: .3s ease all;
+  border: none;
+	border-radius: 5px;
+  background-color: #b30c0b;
+  box-shadow: 2px 2px #0a0a0c;
+}
+
+.btn_store:hover {
+  background-color: #f2f2fc;
+  box-shadow: 1px 1px 1px 2px #0a0a0c;
+}
+
+.btn_store:hover .btn_store-icono {
+  left: calc(100% - 50px);
+  opacity: 1;
+}
+
+.btn_store:hover div svg {
+  color: #b30c0b;
+}
+
+.btn_store:hover span {
+  left: 20px;
+  color: #b30c0b;
+}
+
+.btn_store-icono {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: -20px;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.btn_store div svg {
+  color: #f2f2fc;
+  width: 35px;
+  height: 35px;
+} 
+
+.btn_store span {
+  transition: .4s ease-in-out all;
+  position: absolute;
+  left: 20%;
+  color: #f2f2fc;
+  font-size: 1.1rem;
+}
 
 /* Botones compras */
 
@@ -252,18 +329,45 @@ li a:hover .basket-ball {
   color: #f2f2fc;
 }
 
+.button_add-inactive {
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 30px;
+  width: 17rem;
+  height: 3rem;
+  background-color: #c9c1c1;
+  color: #646262;
+}
+
+.button_finish {
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 30px;
+  width: 17rem;
+  height: 3rem;
+  background-color: #b30c0b;
+  color: #f2f2fc;
+}
+
 /* Productos */
 
 .section_card {
     width: 18rem;
     margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset, rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset; 
 }
 
 .section_card:hover {
-  transform: scale(1.1);
-  transition: 0.5s;
+  transform: scale(1.048);
+  transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.section_card img  {
+  backface-visibility: hidden;
 }
 
 .card_bg {
@@ -312,11 +416,55 @@ li a:hover .basket-ball {
   color: #f2f2fc;
 }
 
+/* Seccion Carrito */
+
+.lista li {
+  list-style: none;
+  height: 270px;
+  padding: 10px;
+}
+
+.lista li img {
+  height: 150px;
+}
+
+.lista li span {
+  padding: 20px;
+}
+
+.lista li div {
+  padding: 20px;
+}
+
+.cart_height {
+  min-height: calc(100vh - 9rem - 9rem);
+}
+
+.cart_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cart_text-container {
+  text-align: center;
+  width: 400px;
+}
+
+.cart_image img{
+  width: 250px;
+  height: 250px;
+}
 
 /* Footer */
 
 .footer_bg {
   background-color: #0a0a0c;
+}
+
+.footer_bg div {
+  height: 9rem;
 }
 
 .footer_menu {

@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
 '& .MuiBadge-badge': {
@@ -27,12 +28,14 @@ const theme = createTheme({
 
 export default function CustomizedBadges() {
     return (
-        <ThemeProvider theme={theme}> 
-            <IconButton aria-label="cart" color="primary">
-                <StyledBadge badgeContent={4} color="secondary">
-                    <ShoppingCartIcon sx={{fontSize: "2.2rem"}}/>
-                </StyledBadge>
-            </IconButton>
-        </ThemeProvider>
+        <Link to="/cart">
+            <ThemeProvider theme={theme}> 
+                <IconButton aria-label="cart" color="primary">
+                    <StyledBadge badgeContent={4} color="secondary">
+                        <ShoppingCartIcon sx={{fontSize: "2.2rem"}}/>
+                    </StyledBadge>
+                </IconButton>
+            </ThemeProvider>
+        </Link>
     );
 }

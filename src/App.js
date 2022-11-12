@@ -5,19 +5,25 @@ import ItemListContainer from "./containers/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeContainer from "./containers/HomeContainer";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
+import CartContextProvider from "./components/CartContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <CartContextProvider >
+      <BrowserRouter>
         <NavBar />
         <Routes>
           <Route path="/" element={<HomeContainer />} />
           <Route path="/category/:id" element={<ItemListContainer />} />
           <Route path="/category/:id" element={<ItemListContainer />} />
           <Route path="/item/:idItem" element={<ItemDetailContainer />} /> 
+          <Route path="/cart" element={<Cart />} /> 
         </Routes>
         <Footer />
-    </BrowserRouter>
+      </BrowserRouter>
+    </CartContextProvider>
+    
   )
 }
 

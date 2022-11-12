@@ -1,10 +1,23 @@
 import CartWidget from "./CartWidget";
 import logo from "../images/inicio/logo03.png"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 const NavBar = () => {
+    const location = useLocation();
+    const pathName = location.pathname;
+    const nav = useRef();
+
+    useEffect(() => {
+        if (pathName !== "/") {
+            nav.current.classList.add('navbar_bg-store');
+        } else {
+            nav.current.classList.remove('navbar_bg-store')
+        }
+    },[pathName])
+
     return (
-        <header className="navbar_bg">
+        <header className="navbar_bg" ref={nav}>
             <div className="container">
                 <nav className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
                     <div className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">

@@ -1,12 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
 import { faCreditCard, faBoxArchive  } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from "react";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 const IconSection = () => {
+    
+    useEffect(() => {
+        AOS.init({
+            duration : 2000
+        });
+    }, []);
+
     return (
         <section className="icon_section">
             <div className="container">
-                <div className="d-flex justify-content-around">
+                <div className="d-flex justify-content-around" data-aos="fade-up">
                     <div className="icon_margin">
                         <FontAwesomeIcon icon={faTruck} className="icon_color"/>
                         <h3>Enviamos sus compras</h3>
