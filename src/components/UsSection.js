@@ -1,4 +1,5 @@
 import kobe from "../images/inicio/kobe.jpg";
+import us from "../images/inicio/us.jpg";
 import BtnStore from "./BtnStore";
 import { useEffect } from "react";
 import AOS from 'aos';
@@ -26,9 +27,9 @@ const UsSection = () => {
             </section>
             
             <section className="us_section">
-                <div className="container d-flex p-5">
-                    <div data-aos="fade-right">
-                        <img src={kobe}></img>
+                <div className="container d-flex align-items-center">
+                    <div className="us_image" data-aos="fade-right">
+                        <img src={us}></img>
                     </div>
                     <div className="us_container" data-aos="fade-left">
                         <h2>Quienes Somos</h2>

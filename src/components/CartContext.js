@@ -8,7 +8,6 @@ const CartContextProvider = (props) => {
 
     const addToCart = (item, quantityToAdd) => {
         let find = cartList.find(elem => elem.idItem === item.id);
-        console.log(find);
         if (find === undefined) {
             setCartList([...cartList, 
                 {
@@ -21,7 +20,6 @@ const CartContextProvider = (props) => {
         } else {
             find.qtyItem += quantityToAdd;        
         }
-        console.log(cartList);
     }
 
     const clearList = () => {
@@ -33,8 +31,16 @@ const CartContextProvider = (props) => {
         setCartList(filter);
     }
 
+    const calcItemsQty = () => {
+        let sum = 0;
+        for (let key of cartList) {
+            sum += key.qtyItem;
+        }
+        return sum;
+    }
+
     return(
-        <CartContext.Provider value={{cartList, addToCart, clearList, removeItem}}>
+        <CartContext.Provider value={{cartList, addToCart, clearList, removeItem, calcItemsQty}}>
             {props.children}
         </CartContext.Provider>
     )

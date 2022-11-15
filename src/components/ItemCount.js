@@ -16,21 +16,32 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     return (
-        <div className="d-flex mt-5">
-            <div className="button_container">
-                <button onClick={decrement}>-</button>
-                <span>{count}</span>
-                <button onClick={increment}>+</button>
-            </div>
-            <div>
-                {            
-                    stock && count ?
-                    <button className="button_add" onClick={() => onAdd(count)}>Agregar al carrito</button>
-                    : <button className="button_add-inactive" disabled>Agregar al carrito</button>
-                }
-                
-            </div>
-        </div>
+        <>
+        { 
+            stock && count 
+                ? <div className="d-flex mt-5">
+                    <div className="button_container">
+                        <button className="button_plus-minus" onClick={decrement}>-</button>
+                        <span>{count}</span>
+                        <button className="button_plus-minus" onClick={increment}>+</button>
+                    </div>
+                    <div>
+                        <button className="button_add" onClick={() => onAdd(count)}>Agregar al carrito</button>
+                    </div>
+                </div>
+        
+                : <div className="d-flex mt-5">
+                    <div className="button_container">
+                        <button className="button_disabled" disabled onClick={decrement}>-</button>
+                        <span className="text-muted">{count}</span>
+                        <button className="button_disabled" disabled onClick={increment}>+</button>
+                    </div>
+                    <div>
+                    <button className="button_add-inactive" disabled>Agregar al carrito</button>
+                    </div>
+                </div>
+        }
+        </>
     )
 }
 

@@ -2,8 +2,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import logo from "../images/inicio/logo03.png"
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Footer = () => {
+    const pathname = useLocation();
+
+    /* Volver arriba desde el logo del footer */
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return(
         <footer className="footer_bg">
             <div className="container d-flex flex-wrap justify-content-between align-items-center">

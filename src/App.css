@@ -187,35 +187,49 @@ li a:hover .basket-ball {
 .us_texto {
   margin-top: -50px;
   text-align: center;
+  background-color: #eeeeee;
+  border-radius: 100px;
+  height: 135px;
+  padding: 20px;
 }
 
 .us_texto2 {
   margin-top: 200px;
   text-align: center;
+  background-color: #eeeeee;
+  border-radius: 100px;
+  height: 135px;
+  padding: 20px;
 }
 
 .us_font {
   color: #b30c0b;
-  font-size: 3rem;
+  font-size: 2.1rem;
   font-family: 'Alfa Slab One', cursive;
 }
 
 .us_section {
-  background-color: #f2f2fc;
+  background-color: #0a0a0c;
   width: 100%;
   height: 550px;
   display: flex;
   align-items: center;
 }
 
+.us_image img {
+  border-radius: 40%;
+}
+
 .us_container {
+  position: absolute;
+  left: 600px;
   flex-direction: column;
   text-align: center;
-  width: 800px;
-  margin-top: 40px;
-  background-color: #c9706c;
+  width: 600px;
+  margin-top: 50px;
+  background-color: #f2f2fc;
   padding: 20px;
-  border-radius: 20%;
+  border-radius: 40px;
 }
 
 .us_container h2 {
@@ -300,12 +314,16 @@ li a:hover .basket-ball {
 }
 
 .button_container span {
+  position: absolute;
   font-size: 2rem;
   margin-right: 20px;
-  
 }
 
-.button_container button {
+.button_container :last-child {
+  margin-left: 35px;
+}
+
+.button_plus-minus {
   border: none;
   margin-right: 20px;
   box-shadow: 0 0 10px;
@@ -316,6 +334,21 @@ li a:hover .basket-ball {
   width: 3rem;
   background-color: #b30c0b;
   color: #f2f2fc;
+  box-shadow: 1px 1px 4px black;
+}
+
+.button_disabled {
+  border: none;
+  margin-right: 20px;
+  box-shadow: 0 0 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  background-color: #c9c1c1;
+  color: #646262;
+  box-shadow: 1px 1px 4px black;
 }
 
 .button_add {
@@ -327,6 +360,7 @@ li a:hover .basket-ball {
   height: 3rem;
   background-color: #b30c0b;
   color: #f2f2fc;
+  box-shadow: 1px 1px 4px black;
 }
 
 .button_add-inactive {
@@ -338,26 +372,31 @@ li a:hover .basket-ball {
   height: 3rem;
   background-color: #c9c1c1;
   color: #646262;
+  box-shadow: 1px 1px 4px black;
 }
 
 .button_finish {
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border-radius: 30px;
-  width: 17rem;
+  width: 15rem;
   height: 3rem;
   background-color: #b30c0b;
   color: #f2f2fc;
+  margin-right: 1rem;
+  box-shadow: 1px 1px 4px black;
 }
 
 /* Productos */
+/* Cards */
 
 .section_card {
     width: 18rem;
     margin-top: 50px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset; 
+    background-color: #eeeeee!important;
 }
 
 .section_card:hover {
@@ -370,8 +409,31 @@ li a:hover .basket-ball {
   backface-visibility: hidden;
 }
 
-.card_bg {
-  background-color: #eeeeee!important;
+.card_link {
+  text-decoration: none;
+}
+
+.card_icon {
+  font-size: 1.3rem;
+  color: #00a650;
+  margin-right: 6px;
+}
+
+.card_text {
+  color: #00a650;
+}
+
+/* Detalle */
+
+.item_zoom {
+  width: 700px;
+  height: 480px;
+  z-index: 2;
+}
+
+.item_zoom-buzos {
+  z-index: 2;
+  margin-bottom: 70px;
 }
 
 .item_detail {
@@ -391,7 +453,7 @@ li a:hover .basket-ball {
   margin-top: 30px;
 }
 
-.btn_detalle {
+/* .btn_detalle {
   border: none;
   margin-right: 25px;
   box-shadow: 0 0 10px;
@@ -400,21 +462,9 @@ li a:hover .basket-ball {
   border-radius: 10px;
   height: 3rem;
   width: 7rem;
-  background-color: #0a0a0c;
-  color: #f2f2fc;
-}
-
-.btn_agregar {
-  border: none;
-  box-shadow: 0 0 10px;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 10px;
-  height: 3rem;
-  width: 7rem;
   background-color: #b30c0b;
   color: #f2f2fc;
-}
+} */
 
 /* Seccion Carrito */
 
@@ -455,6 +505,36 @@ li a:hover .basket-ball {
 .cart_image img{
   width: 250px;
   height: 250px;
+}
+
+.cart_button-clear {
+  border: none;
+  box-shadow: 1px 1px 4px black;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  height: 3rem;
+  font-weight: bold;
+  width: 8.5rem;
+  background-color: #b30c0b;
+  color: #f2f2fc;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 4px;
+}
+
+.cart_item-button {
+  border: none;
+  box-shadow: 1px 1px 4px;
+  font-size: 1.5rem;
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  background-color: #b30c0b;
+}
+
+.cart_item-button-i {
+  color: #f2f2fc;
+  font-size: 1.5rem;
 }
 
 /* Footer */
