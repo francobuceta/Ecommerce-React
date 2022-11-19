@@ -1,10 +1,10 @@
 import { createContext } from "react";
-import { useState } from "react";
+import { useLocalStorage } from "../utilities/useLocalStorage";
 
 export const CartContext = createContext();
 
 const CartContextProvider = (props) => {
-    const [cartList, setCartList] = useState([]);
+    const [cartList, setCartList] = useLocalStorage("item", []);;
 
     const addToCart = (item, quantityToAdd) => {
         let find = cartList.find(elem => elem.idItem === item.id);
@@ -39,8 +39,19 @@ const CartContextProvider = (props) => {
         return sum;
     }
 
+    const calcTotalPerItem = (idItem) => {
+        let itemLocation = cartList.map(item => item.idItem).indexOf(idItem);
+        return cartList[itemLocation].priceItem * cartList[itemLocation].qtyItem;
+    }
+
+    const sumProducts = () => {
+        let array = cartList.map(item => calcTotalPerItem(item.idItem));
+        let sum = array.reduce((acc, item) => acc = acc + item);
+        return sum;
+    }
+
     return(
-        <CartContext.Provider value={{cartList, addToCart, clearList, removeItem, calcItemsQty}}>
+        <CartContext.Provider value={{cartList, addToCart, clearList, removeItem, calcItemsQty, calcTotalPerItem, sumProducts}}>
             {props.children}
         </CartContext.Provider>
     )

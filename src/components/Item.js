@@ -11,7 +11,7 @@ const Item = ({ title, price, picture, id }) => {
                 <div className="card-body">
                     <h5 className="card-title text-dark">{title}</h5>
                     <div>
-                        <span className="card-text text-dark fs-5">{price}</span>
+                        <span className="card-text text-dark fs-5">${price}</span>
                         <div className="mt-2 d-flex align-items-center">
                             <FontAwesomeIcon icon={faTruck} className="card_icon"/>
                             <span className="card_text">Envío gratis a todo el país</span>

@@ -5,16 +5,32 @@ import { CartContext } from "./CartContext";
 import ReactImageMagnify from "react-image-magnify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(1);
     const [goCart, setGoCart] = useState(false);
     const { addToCart } = useContext(CartContext);
 
+    const notification = () => {
+        toast.success("Producto agregado al carrito", {
+            position: "top-right",
+            autoClose: 3200,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+    }
+
     const onAdd = (quantityToAdd) => {
         setItemCount(quantityToAdd);
         addToCart(item, quantityToAdd);
         setGoCart(true);
+        notification();
     }
 
     return(
@@ -38,7 +54,7 @@ const ItemDetail = ({ item }) => {
                     </div>
                     <div className="item_detail">
                         <h2 className="item_detail_title">{item.title}</h2>
-                        <span className="item_detail_price">{item.price}</span>
+                        <span className="item_detail_price">${item.price}</span>
                         <p className="item_detail_description">{item.description}</p>
                         <div className="mb-2 fs-5">
                             <FontAwesomeIcon icon={faTruck} className="card_icon"/>
@@ -50,13 +66,16 @@ const ItemDetail = ({ item }) => {
                             <div className="d-flex mt-5">
                                 <Link to="/category/all"><button className="button_finish">Seguir comprando</button></Link>
                                 <Link to="/cart"><button className="button_finish">Finalizar compra</button></Link>
+                                <ToastContainer />
                             </div>
-                            : <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
+                            : <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
                         }
                     </div>
                 </div> 
 
-            : <p>Cargando...</p>
+            : <div className="cart_height">
+                <div className="spinner"></div>
+            </div>
         }
         </>
     );

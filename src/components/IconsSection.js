@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTruck } from '@fortawesome/free-solid-svg-icons';
-import { faCreditCard, faBoxArchive  } from '@fortawesome/free-solid-svg-icons';
+import { faTruck, faCreditCard, faBoxArchive } from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from "react";
 import AOS from 'aos';
 import "aos/dist/aos.css";

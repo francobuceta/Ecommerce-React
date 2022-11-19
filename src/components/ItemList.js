@@ -13,7 +13,9 @@ const ItemList = ({ items }) => {
                         picture = {item.pictureUrl}
                         id = {item.id} />
                     )) 
-                : <p>Cargando...</p>
+                : <div className="cart_height">
+                    <div className="spinner"></div>
+                </div>
             }  
         </section>
     )

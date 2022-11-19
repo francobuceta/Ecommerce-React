@@ -1,4 +1,3 @@
-import kobe from "../images/inicio/kobe.jpg";
 import us from "../images/inicio/us.jpg";
 import BtnStore from "./BtnStore";
 import { useEffect } from "react";
