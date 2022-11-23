@@ -24,7 +24,7 @@ const Footer = () => {
                 <ul className="nav col-md-4 justify-content-center">
                     <Link to="/category/camisetas" className="footer_menu"><li className="nav-item footer_menu-border px-2">CAMISETAS</li></Link>
                     <Link to="/category/buzos" className="footer_menu"><li className="nav-item footer_menu-border px-2">BUZOS</li></Link>
-                    <Link to="/category/bermudas" className="footer_menu"><li className="nav-item px-2">BERMUDAS</li></Link>
+                    <Link to="/category/shorts" className="footer_menu"><li className="nav-item px-2">BERMUDAS</li></Link>
                 </ul>
 
                 <div className="col-md-4 d-flex align-items-center justify-content-end mb-3 mb-md-0 me-md-auto">

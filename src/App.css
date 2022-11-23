@@ -188,7 +188,7 @@ li a:hover .basket-ball {
   margin-top: -50px;
   text-align: center;
   background-color: #eeeeee;
-  border-radius: 100px;
+  border-radius: 10px;
   height: 135px;
   padding: 20px;
 }
@@ -197,7 +197,7 @@ li a:hover .basket-ball {
   margin-top: 200px;
   text-align: center;
   background-color: #eeeeee;
-  border-radius: 100px;
+  border-radius: 10px;
   height: 135px;
   padding: 20px;
 }
@@ -419,6 +419,10 @@ li a:hover .basket-ball {
   text-decoration: none;
 }
 
+.card_link hr {
+  color: #646262;
+}
+
 .card_icon {
   font-size: 1.3rem;
   color: #00a650;
@@ -427,6 +431,14 @@ li a:hover .basket-ball {
 
 .card_text {
   color: #00a650;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.card_text-sold {
+  color: #d60e0e;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 /* Detalle */
@@ -575,12 +587,13 @@ li a:hover .basket-ball {
   font-size: 1.5rem;
 }
 
+/* Seccion resumen de compra */
 .cart_resumen {
   border: 1px solid black;
   width: 600px;
   height: 340px;
-  background-color: #dfd9d5;
-  color: #0a0a0c;
+  background-color: #232329;
+  color: #f2f2fc;
   font-family:Arial, Helvetica, sans-serif;
   margin-top: 40px;
 }
@@ -611,6 +624,37 @@ li a:hover .basket-ball {
 .btn_terminar-compra:hover {
   box-shadow: 0 4px 16px rgb(17, 18, 19);
   transition: all 0.2s ease;
+  background-color: #a10a0a;
+}
+
+/* Formulario */
+.form {
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 600px;
+  background-color: #232329;
+  color: #f2f2fc;
+  border-radius: 10px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.input input {
+  height: 40px;
+  background-color: #646262;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+}
+
+.enviar input {
   background-color: #a10a0a;
 }
 

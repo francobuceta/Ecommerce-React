@@ -60,7 +60,12 @@ const ItemDetail = ({ item }) => {
                             <FontAwesomeIcon icon={faTruck} className="card_icon"/>
                             <span className="card_text">Envío gratis a todo el país</span>
                         </div>
-                        <span className="fs-5">{item.stock} unidad/es disponibles</span>
+                        {
+                            item.stock > 0
+                            ? <span className="fs-5">{item.stock} unidad/es disponibles</span>
+                            : <span className="card_text-sold fs-5">AGOTADO TEMPORALMENTE</span>
+                        }
+                        
                         {
                             goCart ?
                             <div className="d-flex mt-5">

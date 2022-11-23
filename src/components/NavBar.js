@@ -46,8 +46,8 @@ const NavBar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/category/bermudas" className="nav-links">
-                                <div className="nav-link px-2 nav-links">BERMUDAS
+                            <Link to="/category/shorts" className="nav-links">
+                                <div className="nav-link px-2 nav-links">SHORTS
                                     <div className="basket-ball">
                                         <div className="line2"></div>
                                         <div className="line1"></div>

@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTruck } from '@fortawesome/free-solid-svg-icons';
 
-const Item = ({ title, price, picture, id }) => {
+const Item = ({ title, price, picture, id, stock }) => {
     return (
         <Link to={`/item/${id}`} className="card_link">
             <div className="card section_card">
@@ -11,11 +9,11 @@ const Item = ({ title, price, picture, id }) => {
                 <div className="card-body">
                     <h5 className="card-title text-dark">{title}</h5>
                     <div>
-                        <span className="card-text text-dark fs-5">${price}</span>
-                        <div className="mt-2 d-flex align-items-center">
-                            <FontAwesomeIcon icon={faTruck} className="card_icon"/>
-                            <span className="card_text">Envío gratis a todo el país</span>
-                        </div>
+                        <span className="card-text text-dark fs-5">${price}</span><br />
+                        { stock > 0 
+                            ? <span className="card_text">{stock} unidades disponibles</span>
+                            : <span className="card_text-sold">AGOTADO</span>
+                        }
                     </div>
                 </div>
             </div>

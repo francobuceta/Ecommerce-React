@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { Link } from "react-router-dom";
 
 const PurchaseSummary = () => {
     const { calcItemsQty, sumProducts } = useContext(CartContext);
@@ -14,14 +15,14 @@ const PurchaseSummary = () => {
                 </div>
                 <div className="d-flex justify-content-between">
                     <span>Envío:</span>
-                    <span className="text-success">GRATIS</span>
+                    <span className="card_text fs-4">GRATIS</span>
                 </div>
                 <div className="d-flex justify-content-between">
                     <span>TOTAL:</span>
                     <span>${sumProducts()}</span>
                 </div>
                 <div className="text-center">
-                    <button className="btn_terminar-compra">Terminar mi compra</button>
+                    <Link to="/checkout"><button className="btn_terminar-compra">Terminar mi compra</button></Link>
                 </div>
             </div>
         </section>

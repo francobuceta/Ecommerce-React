@@ -11,7 +11,8 @@ const ItemList = ({ items }) => {
                         title = {item.title}
                         price = {item.price}
                         picture = {item.pictureUrl}
-                        id = {item.id} />
+                        id = {item.id} 
+                        stock = {item.stock} />
                     )) 
                 : <div className="cart_height">
                     <div className="spinner"></div>
