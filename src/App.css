@@ -701,3 +701,8 @@ li a:hover .basket-ball {
 .footer_ig-icon:hover {
   color: #780a07;
 }
+
+/* Sweet Alert */
+.swal2-popup .swal2-styled:focus {
+  box-shadow: none !important;
+}

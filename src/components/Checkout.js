@@ -2,16 +2,35 @@ import { useForm } from "react-hook-form";
 import { serverTimestamp, doc, setDoc, collection, updateDoc, increment } from "firebase/firestore";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { useNavigate } from "react-router-dom";
 import { db } from "../utilities/firebaseConfig";
+import Swal from "sweetalert2";
 
 const Checkout = () => {
     const { cartList, clearList, sumProducts } = useContext(CartContext);
-    const { register, formState: { errors }, handleSubmit, watch } = useForm();
+    const { register, formState: { errors, isDirty, isValid }, handleSubmit, watch } = useForm();
+    const navigate = useNavigate();
+    
+    const onSubmit = () => {
+        createOrder();
+        /* console.log(data); */
+    }
 
-    const onSubmit = (data) => {
-        console.log(data);
-        return true;
-        /* e.target.reset(); */
+    const showAlert = (response) => {
+        Swal.fire({
+            title: "Order ID: " + response.id, 
+            icon: "success",
+            iconColor: "#00a650",
+            confirmButtonText: "Volver al Inicio",
+            confirmButtonColor: "#404046",
+            backdrop: "#00a650",
+            allowOutsideClick: false
+        })
+        .then((result) => {
+            if (result.isConfirmed) {
+                navigate("/");
+            }
+        });
     }
 
     const createOrder = () => {
@@ -40,17 +59,15 @@ const Checkout = () => {
         }
 
         AddOrderInDB()
-        .then(response => {
-            if (onSubmit() == true) {   
-                alert("Order ID: " + response.id);
-                cartList.forEach(async (item) => {
-                    const itemRef = doc(db, "products", item.idItem);
-                    await updateDoc(itemRef, {
-                        stock: increment(-item.qtyItem)
-                    });
-                })
-                clearList();
-            }
+        .then(response => { 
+            showAlert(response);
+            cartList.forEach(async (item) => {
+                const itemRef = doc(db, "products", item.idItem);
+                await updateDoc(itemRef, {
+                    stock: increment(-item.qtyItem)
+                });
+            })
+            clearList();
         })
         .catch(err => console.log(err));
     }
@@ -99,10 +116,10 @@ const Checkout = () => {
                             {errors.direccion?.type === "required" && <p>Campo obligatorio</p>}
                         </div>
                         <div className="input enviar">
-                            <input type="submit" value="Enviar" onClick={createOrder}/>
+                            <input type="submit" value="Enviar" /* onClick={createOrder} */ 
+                            /* disabled={!isDirty || !isValid} */ />
                         </div>
                     </div>
-                    
                 </form>
             </section>
         </>
