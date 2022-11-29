@@ -1,4 +1,5 @@
 import ItemCount from "./ItemCount";
+import FormatNumber from "../utilities/FormatNumber";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
@@ -37,7 +38,7 @@ const ItemDetail = ({ item }) => {
         <>
         {
             item && item.pictureUrl ?
-                <div className="d-flex justify-content-center mt-5" key={item.id}>
+                <div className="d-flex justify-content-center mt-5 detail_mobile cart_height" key={item.id}>
                     <div className={item.category === "camisetas" ? "item_zoom" : "item_zoom-buzos"}>
                         <ReactImageMagnify {...{
                             smallImage: {
@@ -54,7 +55,7 @@ const ItemDetail = ({ item }) => {
                     </div>
                     <div className="item_detail">
                         <h2 className="item_detail_title">{item.title}</h2>
-                        <span className="item_detail_price">${item.price}</span>
+                        <span className="item_detail_price"><FormatNumber number={item.price} /></span>
                         <p className="item_detail_description">{item.description}</p>
                         <div className="mb-2 fs-5">
                             <FontAwesomeIcon icon={faTruck} className="card_icon"/>
@@ -68,7 +69,7 @@ const ItemDetail = ({ item }) => {
                         
                         {
                             goCart ?
-                            <div className="d-flex mt-5">
+                            <div className="d-flex mt-5 count_container-mobile">
                                 <Link to="/category/all"><button className="button_finish">Seguir comprando</button></Link>
                                 <Link to="/cart"><button className="button_finish">Finalizar compra</button></Link>
                                 <ToastContainer />
@@ -78,7 +79,7 @@ const ItemDetail = ({ item }) => {
                     </div>
                 </div> 
 
-            : <div className="cart_height">
+            : <div className="cart_height d-flex justify-content-center">
                 <div className="spinner"></div>
             </div>
         }

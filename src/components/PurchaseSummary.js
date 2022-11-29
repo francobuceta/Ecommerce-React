@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
+import FormatNumber from "../utilities/FormatNumber";
 
 const PurchaseSummary = () => {
     const { calcItemsQty, sumProducts } = useContext(CartContext);
@@ -19,7 +20,7 @@ const PurchaseSummary = () => {
                 </div>
                 <div className="d-flex justify-content-between">
                     <span>TOTAL:</span>
-                    <span>${sumProducts()}</span>
+                    <span><FormatNumber number={sumProducts()}/></span>
                 </div>
                 <div className="text-center">
                     <Link to="/checkout"><button className="btn_terminar-compra">Terminar mi compra</button></Link>

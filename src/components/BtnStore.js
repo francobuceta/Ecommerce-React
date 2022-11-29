@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BtnStore = () => {
     return(
-        <Link to="/category/all">
+        <Link to="/category/all" className="btn_centrado">
             <button className="btn_store">
                 <div className="btn_store-icono">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">

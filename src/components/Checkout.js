@@ -8,17 +8,17 @@ import Swal from "sweetalert2";
 
 const Checkout = () => {
     const { cartList, clearList, sumProducts } = useContext(CartContext);
-    const { register, formState: { errors, isDirty, isValid }, handleSubmit, watch } = useForm();
+    const { register, formState: { errors }, handleSubmit, watch } = useForm();
     const navigate = useNavigate();
     
     const onSubmit = () => {
         createOrder();
-        /* console.log(data); */
     }
 
     const showAlert = (response) => {
         Swal.fire({
-            title: "Order ID: " + response.id, 
+            text: "Orden ID: " + response.id,
+            title: "¡Gracias por su compra!", 
             icon: "success",
             iconColor: "#00a650",
             confirmButtonText: "Volver al Inicio",
@@ -28,7 +28,7 @@ const Checkout = () => {
         })
         .then((result) => {
             if (result.isConfirmed) {
-                navigate("/");
+                navigate("/Ecommerce-React");
             }
         });
     }
@@ -83,14 +83,14 @@ const Checkout = () => {
                             <input type="text" {...register("nombre", {
                                 required: true,
                             })} />
-                            {errors.nombre?.type === "required" && <p>Campo obligatorio</p>}
+                            {errors.nombre?.type === "required" && <span>Campo obligatorio</span>}
                         </div>
                         <div className="input">
                             <label>Apellido</label>
                             <input type="text" {...register("apellido", {
                                 required: true
                             })} />
-                            {errors.apellido?.type === "required" && <p>Campo obligatorio</p>}
+                            {errors.apellido?.type === "required" && <span>Campo obligatorio</span>}
                         </div>
                         <div className="input">
                             <label>E-mail</label>
@@ -98,26 +98,25 @@ const Checkout = () => {
                                 required: true,
                                 pattern: /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/
                             })} />
-                            {errors.email?.type === "required" && <p>Campo obligatorio</p>}
-                            {errors.email?.type === "pattern" && <p>Formato de e-mail incorrecto</p>}
+                            {errors.email?.type === "required" && <span>Campo obligatorio</span>}
+                            {errors.email?.type === "pattern" && <span>Formato de e-mail incorrecto</span>}
                         </div>
                         <div className="input">
                             <label>Teléfono</label>
-                            <input type="text" {...register("telefono", {
-                                required: true
+                            <input type="number" {...register("telefono", {
+                                required: true,
                             })} />
-                            {errors.telefono?.type === "required" && <p>Campo obligatorio</p>}
+                            {errors.telefono?.type === "required" && <span>Campo obligatorio</span>}
                         </div>
                         <div className="input">
                             <label>Dirección</label>
                             <input type="text" {...register("direccion", {
                                 required: true
                             })} />
-                            {errors.direccion?.type === "required" && <p>Campo obligatorio</p>}
+                            {errors.direccion?.type === "required" && <span>Campo obligatorio</span>}
                         </div>
                         <div className="input enviar">
-                            <input type="submit" value="Enviar" /* onClick={createOrder} */ 
-                            /* disabled={!isDirty || !isValid} */ />
+                            <input type="submit" value="Enviar" />
                         </div>
                     </div>
                 </form>

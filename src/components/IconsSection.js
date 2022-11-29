@@ -14,12 +14,12 @@ const IconSection = () => {
 
     return (
         <section className="icon_section">
-            <div className="container">
-                <div className="d-flex justify-content-around" data-aos="fade-up">
+            <div /* className="container" */>
+                <div className="d-flex justify-content-center flex-wrap" data-aos="fade-up">
                     <div className="icon_margin">
                         <FontAwesomeIcon icon={faTruck} className="icon_color"/>
                         <h3>Enviamos sus compras</h3>
-                        <p>Realizamos envíos a todo el país y con mucha rapidez.</p>
+                        <p>Realizamos envíos a todo el país (promoción envío sin cargo actualmente).</p>
                     </div>
                     <div className="icon_margin">
                         <FontAwesomeIcon icon={faCreditCard} className="icon_color"/>

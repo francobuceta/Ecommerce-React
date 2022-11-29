@@ -1,4 +1,3 @@
-import us from "../images/inicio/us.jpg";
 import BtnStore from "./BtnStore";
 import { useEffect } from "react";
 import AOS from 'aos';
@@ -28,7 +27,7 @@ const UsSection = () => {
             <section className="us_section">
                 <div className="container d-flex align-items-center">
                     <div className="us_image" data-aos="fade-right">
-                        <img src={us}></img>
+                        <img src="https://res.cloudinary.com/dzm5lgpyv/image/upload/v1669412591/ecommerce/us_m7kgjb.jpg"></img>
                     </div>
                     <div className="us_container" data-aos="fade-left">
                         <h2>Quienes Somos</h2>

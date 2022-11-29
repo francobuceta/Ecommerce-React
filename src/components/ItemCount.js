@@ -19,7 +19,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <>
         { 
             stock && count 
-                ? <div className="d-flex mt-5">
+                ? <div className="d-flex mt-5 count_container-mobile">
                     <div className="button_container">
                         <button className="button_plus-minus" onClick={decrement}>-</button>
                         <span>{count}</span>
@@ -30,7 +30,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                     </div>
                 </div>
         
-                : <div className="d-flex mt-5">
+                : <div className="d-flex mt-5 count_container-mobile">
                     <div className="button_container">
                         <button className="button_disabled" disabled onClick={decrement}>-</button>
                         <span className="text-muted">{count}</span>

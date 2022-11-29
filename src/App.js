@@ -15,7 +15,7 @@ const App = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<HomeContainer />} />
+          <Route path="/Ecommerce-React" element={<HomeContainer />} />
           <Route path="/category/:id" element={<ItemListContainer />} />
           <Route path="/category/:id" element={<ItemListContainer />} />
           <Route path="/item/:idItem" element={<ItemDetailContainer />} /> 
