@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Ecommerce React - "Pick & Roll Tienda Deportiva"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es un sitio web desarrollado como trabajo final para el curso de React en Coderhouse. El mismo es un ecommerce donde se puede comprar ropa deportiva de equipos de básquet de la NBA.
 
-## Available Scripts
+La finalidad de este sitio es la de ofrecer productos y que el usuario pueda tener una experiencia de compra real (sin pasarela de pagos). Consta de una tienda con 3 secciones donde se pueden ver los distintos productos, los cuales están alojados en una base de datos (Firebase).
+El usuario ingresa al sitio y lo primero que observa en pantalla es el Home, donde desde ahí puede ir directamente a la tienda, navegar por las secciones, acceder al carrito de compras, y conocer sobre la empresa.
+Una vez ingresado a la tienda puede ver los productos ofrecidos con su respectivo nombre, precio, y stock disponible. Al elegir un producto tendrá acceso a un detalle del mismo en donde podrá seleccionar la cantidad de items que desea (si el stock disponible lo permite), y así guardar ese producto en su carrito personal de compra.
+Luego de haber agregado los productos deseados, el usuario puede visualizarlos en el componente Cart e interactuar eliminando el que no quiera, o procediendo a terminar la compra.
+Finalmente podrá llenar un formulario con sus datos (los cuales en ningún momento serán expuestos, sólo se almacenan en la base de datos), y de esta manera se formaliza la compra, en donde a tráves de una alerta se le proporciona al cliente un número de ID de su compra, y se descuenta la cantidad de stock seleccionada de la base de datos.
 
-In the project directory, you can run:
+## Construido con 🛠️
 
-### `npm start`
+* HTML5
+* CSS3
+* JAVASCRIPT
+* REACT
+* FIREBASE
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Se utilizaron las siguientes librerías:
+* Material UI (aplicado al componente CartWidget para poder crear icono de carrito de compras y badge para indicar la cantidad de productos existentes).
+* Bootstrap (clases de estilo).
+* FontAwesome (iconos).
+* AOS (animaciones aplicadas al Home).
+* Gh-Pages (deploy giuthub pages).
+* Firebase (base de datos en la nube).
+* React-router-dom (enlazar los componentes).
+* React-hook-form (validar los datos del formulario y poder trabajar con ellos).
+* React-image-magnify (libreria que realiza un zoom cuando se hace hover sobre la imagen en el componente ItemDetail).
+* React-toastify (notificación al agregar producto al carrito).
+* SweetAlert (alerta al finalizar la compra).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Expresiones de Gratitud 🎁
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Estoy totalmente agradecido a Coderhouse por la oportunidad de seguir aprendiendo y sumar herramientas; y a mi espléndido profesor **Álex Marín Méndez** - [Alex](https://github.com/alexmarinmendez) por las excelentes clases, su manera de enseñar y compartir su conociemiento y experiencia me han enriquecido mucho :raised_hands:
