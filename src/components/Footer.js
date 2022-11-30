@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="container d-flex flex-wrap justify-content-between align-items-center">
                 
                 <div className="col-md-4 d-flex align-items-center justify-content-start">
-                    <Link to="/Ecommerce-React"><img src="https://res.cloudinary.com/dzm5lgpyv/image/upload/v1669412591/ecommerce/logo03_o5apga.png" className="nav_logo"></img></Link>
+                    <Link to="/"><img src="https://res.cloudinary.com/dzm5lgpyv/image/upload/v1669412591/ecommerce/logo03_o5apga.png" className="nav_logo"></img></Link>
                 </div>
 
                 <ul className="footer_menu-container col-md-4 justify-content-center">

@@ -9,7 +9,7 @@ const NavBar = () => {
     const mobileMenu = useRef();
 
     useEffect(() => {
-        if (pathName !== "/Ecommerce-React" && pathName !== "/Ecommerce-React/") {
+        if (pathName !== "/") {
             nav.current.classList.add('navbar_bg-store');
         } else {
             nav.current.classList.remove('navbar_bg-store')
@@ -27,7 +27,7 @@ const NavBar = () => {
                     <div className="container-fluid">
 
                         <div className="text-dark text-decoration-none d-flex">
-                            <Link to="/Ecommerce-React"><img src="https://res.cloudinary.com/dzm5lgpyv/image/upload/v1669412591/ecommerce/logo03_o5apga.png" className="nav_logo"></img></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dzm5lgpyv/image/upload/v1669412591/ecommerce/logo03_o5apga.png" className="nav_logo"></img></Link>
                         </div>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

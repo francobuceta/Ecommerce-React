@@ -28,7 +28,7 @@ const Checkout = () => {
         })
         .then((result) => {
             if (result.isConfirmed) {
-                navigate("/Ecommerce-React");
+                navigate("/");
             }
         });
     }
