@@ -8,7 +8,7 @@ La finalidad de este sitio es la de ofrecer productos y que el usuario pueda ten
 
 El usuario ingresa al sitio y lo primero que observa en pantalla es el Home, donde desde ahí puede ir directamente a la tienda, navegar por las secciones, acceder al carrito de compras, y conocer sobre la empresa.
 
-Una vez ingresado a la tienda puede ver los productos ofrecidos con su respectivo nombre, precio, y stock disponible. Al elegir un producto tendrá acceso a un detalle del mismo en donde podrá seleccionar la cantidad de items que desea (si el stock disponible lo permite), y así guardar ese producto en su carrito personal de compra.
+Una vez ingresado a la tienda puede ver los productos ofrecidos con su respectivo nombre, precio, y stock disponible. Al elegir un producto tendrá acceso a un detalle del mismo en donde podrá seleccionar la cantidad de items que desea (si el stock disponible lo permite), y así guardar ese producto en su carrito personal de compra, el cual se mantendrá guardado aunque el usuario salga del sitio, debido al uso de Local Storage.
 
 Luego de haber agregado los productos deseados, el usuario puede visualizarlos en el componente Cart e interactuar eliminando el que no quiera, o procediendo a terminar la compra.
 
@@ -20,6 +20,7 @@ Finalmente podrá llenar un formulario con sus datos (los cuales en ningún mome
 * CSS3
 * JAVASCRIPT
 * REACT
+* CRA
 * FIREBASE
 
 Se utilizaron las siguientes librerías:
