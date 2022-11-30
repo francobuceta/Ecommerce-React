@@ -8,6 +8,7 @@ const UsSection = () => {
     useEffect(() => {
         AOS.init({
             duration : 2000,
+            disable: 'mobile'
         });
     }, []);
 
