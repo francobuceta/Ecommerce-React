@@ -28,11 +28,11 @@ const theme = createTheme({
     }
 })
 
-export default function CustomizedBadges() {
+export default function CustomizedBadges( {closeMobileMenu} ) {
     const ctx = useContext(CartContext);
 
     return (
-        <Link to="/cart">
+        <Link to="/cart" onClick={closeMobileMenu}>
             <ThemeProvider theme={theme}> 
                 <IconButton aria-label="cart" color="primary">
                     <StyledBadge badgeContent={ctx.calcItemsQty()} color="secondary">

@@ -9,7 +9,7 @@ const NavBar = () => {
     const mobileMenu = useRef();
 
     useEffect(() => {
-        if (pathName !== "/Ecommerce-React") {
+        if (pathName !== "/Ecommerce-React" && pathName !== "/Ecommerce-React/") {
             nav.current.classList.add('navbar_bg-store');
         } else {
             nav.current.classList.remove('navbar_bg-store')
@@ -68,7 +68,7 @@ const NavBar = () => {
                                 </li>
                             </ul>
                             <div className="nav_cart-hide-mobile">
-                                <CartWidget />
+                                <CartWidget closeMobileMenu={closeMobileMenu} />
                             </div>
                         </div>
                         <div className="justify-content-end nav_cart-hide">

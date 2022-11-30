@@ -1,3 +1,5 @@
+/* ESTILOS GENERALES */
+
 * {
   padding: 0;
   margin: 0;
@@ -10,6 +12,9 @@ body {
   scroll-behavior: smooth;
 }
 
+
+
+/* NAVBAR */
 .navbar_bg {
   background-color: #0a0a0c;
   height: 6rem; /* Achico navbar para que pueda entrar el banner */
@@ -21,8 +26,8 @@ body {
 }
 
 .nav_logo {
-  width: 130px;
-  height: 120px;
+  width: 8.12rem;
+  height: 7.5rem;
 }
 
 .nav-links {
@@ -46,35 +51,9 @@ body {
   color: transparent;
 }
 
-/* Banner */
 
-.banner_bg{
-  background-image: url("https://res.cloudinary.com/dzm5lgpyv/image/upload/v1669412592/ecommerce/navbar-bg_ykusma.png");
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 700px;
-}
 
-.banner_text {
-  color: #f2f2fc;
-  flex-direction: column;
-}
-
-.banner_text h1 {
-  font-family: 'Alfa Slab One';
-  font-size: 4rem;
-  font-style: italic;
-  color: #b30c0b;
-}
-
-.banner_text p {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-/* Pelota de Basquet */
-
+/* EFECTO PELOTA DE BASQUET */
 @keyframes example {
   90% {
     height: 30px;
@@ -147,8 +126,37 @@ li a:hover .basket-ball {
   animation: example 0.5s alternate infinite ease-in;
 }
 
-/* Seccion de iconos */
 
+
+/* BANNER */
+.banner_bg{
+  background-image: url("https://res.cloudinary.com/dzm5lgpyv/image/upload/v1669412592/ecommerce/navbar-bg_ykusma.png");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 43.75rem;
+}
+
+.banner_text {
+  color: #f2f2fc;
+  flex-direction: column;
+}
+
+.banner_text h1 {
+  font-family: 'Alfa Slab One';
+  font-size: 4rem;
+  font-style: italic;
+  color: #b30c0b;
+}
+
+.banner_text p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+
+/* SECCION DE ICONOS */
 .icon_section {
   background-color: #f2f2fc;
   width: 100%;
@@ -158,7 +166,7 @@ li a:hover .basket-ball {
 .icon_section p {
   color: #0a0a0c;
   text-align: center;
-  width: 400px;
+  width: 25rem;
 }
 
 .icon_section h3 {
@@ -181,15 +189,15 @@ li a:hover .basket-ball {
 }
 
 
-/* Seccion Nosotros */
 
+/* SECCION NOSOTROS */
 .us_section_bg {
   background-image: url("https://res.cloudinary.com/dzm5lgpyv/image/upload/v1669412592/ecommerce/lebron3_iauhx3.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 700px;
+  height: 43.75rem;
 }
 
 .us_texto {
@@ -197,7 +205,7 @@ li a:hover .basket-ball {
   text-align: center;
   background-color: #eeeeee;
   border-radius: 10px;
-  height: 135px;
+  height: 8.43rem;
   padding: 20px;
 }
 
@@ -206,7 +214,7 @@ li a:hover .basket-ball {
   text-align: center;
   background-color: #eeeeee;
   border-radius: 10px;
-  height: 135px;
+  height: 8.43rem;
   padding: 20px;
 }
 
@@ -219,7 +227,7 @@ li a:hover .basket-ball {
 .us_section {
   background-color: #0a0a0c;
   width: 100%;
-  height: 550px;
+  height: 34.37rem;
   display: flex;
   align-items: center;
 }
@@ -230,10 +238,10 @@ li a:hover .basket-ball {
 
 .us_container {
   position: absolute;
-  left: 600px;
+  left: 37.5rem;
   flex-direction: column;
   text-align: center;
-  width: 600px;
+  width: 37.5rem;
   margin-top: 50px;
   background-color: #f2f2fc;
   padding: 20px;
@@ -255,11 +263,12 @@ li a:hover .basket-ball {
   letter-spacing: 2px;
 }
 
-/* Boton "ir a tienda" */
 
+
+/* BOTON "IR A TIENDA" */
 .btn_store {
-  width: 180px;
-  height: 50px;
+  width: 11.25rem;
+  height: 3.12rem;
   position: relative;
   display: inline-flex;
 	align-items: center;
@@ -286,7 +295,7 @@ li a:hover .basket-ball {
 }
 
 .btn_store:hover span {
-  left: 20px;
+  left: 1.25rem;
   color: #b30c0b;
 }
 
@@ -295,15 +304,15 @@ li a:hover .basket-ball {
   align-items: center;
   position: absolute;
   z-index: 2;
-  left: -20px;
+  left: -1.25rem;
   transition: .3s ease-in-out;
   opacity: 0;
 }
 
 .btn_store div svg {
   color: #f2f2fc;
-  width: 35px;
-  height: 35px;
+  width: 2.18rem;
+  height: 2.18rem;
 } 
 
 .btn_store span {
@@ -314,8 +323,9 @@ li a:hover .basket-ball {
   font-size: 1.1rem;
 }
 
-/* Botones compras */
 
+
+/* BOTONES DE COMPRA */
 .button_container {
   margin-right: 30px;
 }
@@ -401,9 +411,9 @@ li a:hover .basket-ball {
   box-shadow: 1px 1px 4px black;
 }
 
-/* Productos */
-/* Cards */
 
+
+/* ITEM CARDS */
 .section_card {
     width: 18rem;
     margin-top: 50px;
@@ -448,11 +458,12 @@ li a:hover .basket-ball {
   font-size: 1.2rem;
 }
 
-/* Detalle */
 
+
+/* ITEM DETALLE */
 .item_zoom {
-  width: 700px;
-  height: 480px;
+  width: 43.75rem;
+  height: 30rem;
   z-index: 2;
 }
 
@@ -480,8 +491,8 @@ li a:hover .basket-ball {
 
 .spinner {
   border: 6px solid #a7a7ac;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
   border-left-color: #b30c0b;
   animation: spin 1s linear infinite;
@@ -497,8 +508,9 @@ li a:hover .basket-ball {
   }
 }
 
-/* Seccion Carrito */
 
+
+/* SECCION CARRITO */
 .cart_list div {
   padding: 10px;
 }
@@ -537,12 +549,12 @@ li a:hover .basket-ball {
 
 .cart_text-container {
   text-align: center;
-  width: 400px;
+  width: 25rem;
 }
 
 .cart_image img{
-  width: 250px;
-  height: 250px;
+  width: 15.62rem;
+  height: 15.62rem;
 }
 
 .cart_button-clear {
@@ -586,11 +598,13 @@ li a:hover .basket-ball {
   font-size: 1.5rem;
 }
 
-/* Seccion resumen de compra */
+
+
+/* SECCION RESUMEN DE COMPRA */
 .cart_resumen {
   border: 1px solid black;
-  width: 600px;
-  height: 340px;
+  width: 37.5rem;
+  height: 21.25rem;
   background-color: #232329;
   color: #f2f2fc;
   font-family:Arial, Helvetica, sans-serif;
@@ -626,12 +640,14 @@ li a:hover .basket-ball {
   background-color: #a10a0a;
 }
 
-/* Formulario */
+
+
+/* FORMULARIO */
 .form {
   padding: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 600px;
+  width: 37.5rem;
   background-color: #232329;
   color: #f2f2fc;
   border-radius: 10px;
@@ -646,7 +662,7 @@ li a:hover .basket-ball {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 400px;
+  width: 25rem;
   margin-bottom: 35px;
 }
 
@@ -672,7 +688,9 @@ li a:hover .basket-ball {
   height: 48px;
 }
 
-/* Footer */
+
+
+/* FOOTER */
 footer {
   bottom: 0!important;
   position:static; /*mantener el footer abajo*/
@@ -728,13 +746,16 @@ footer {
   color: #780a07;
 }
 
-/* Sweet Alert */
+
+
+/* SWEET ALERT */
 .swal2-popup .swal2-styled:focus {
   box-shadow: none !important;
 }
 
 
-/* Media Queries */
+
+/* MEDIA QUERIES */
 @media (max-width: 1165px) {
   .banner_bg {
     background-image: none;
@@ -749,11 +770,11 @@ footer {
   }
 
   .us_section {
-    height: 700px;
+    height: 43.75rem;
   }
   .us_container {
-    left: 600px;
-    width: 460px;
+    left: 37.5rem;
+    width: 28.75rem;
   }
 }
 
@@ -785,7 +806,7 @@ footer {
   .us_container {
     position: relative;
     left: 0;
-    width: 600px;
+    width: 37.5rem;
     margin: auto;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -795,8 +816,8 @@ footer {
   }
 
   .item_zoom-buzos {
-    width: 400px;
-    height: 200px;
+    width: 25rem;
+    height: 12.5rem;
   }
 
   .button_add {
@@ -875,8 +896,8 @@ footer {
     display: block!important;
   }
   .item_zoom {
-    width: 400px;
-    height: 200px;
+    width: 25rem;
+    height: 12.5rem;
   }
   .item_detail {
     margin: 0 auto;
@@ -908,25 +929,25 @@ footer {
   }
 
   .item_zoom-buzos {
-    width: 350px;
-    height: 150px;
+    width: 21.87rem;
+    height: 9.37rem;
   }
   .item_zoom {
-    width: 350px;
-    height: 150px;
+    width: 21.87rem;
+    height: 9.37rem;
   }
 
   .form {
-    width: 400px;
+    width: 25rem;
   }
   .input {
-    width: 300px;
+    width: 18.75rem;
   }
 }
 
 @media (max-width: 390px) {
   .icon_section p {
-    width: 300px;
+    width: 18.75rem;
   }
 
   .cart_resumen h3 {
@@ -937,15 +958,15 @@ footer {
   }
 
   .cart_image img{
-    width: 150px;
-    height: 150px;
+    width: 9.37rem;
+    height: 9.37rem;
   }
 
   .form {
-    width: 350px;
+    width: 21.87rem;
   }
   .input {
-    width: 250px;
+    width: 15.62rem;
   }
 }
 
@@ -959,12 +980,12 @@ footer {
   }
 
   .item_zoom-buzos {
-    width: 300px;
-    height: 100px;
+    width: 18.75rem;
+    height: 6.25rem;
   }
   .item_zoom {
-    width: 300px;
-    height: 100px;
+    width: 18.75rem;
+    height: 6.25rem;
   }
 
   
@@ -976,6 +997,6 @@ footer {
   }
   .cart_text-container {
     text-align: center;
-    width: 300px;
+    width: 18.75rem;
   }
 }
