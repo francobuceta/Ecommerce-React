@@ -39,4 +39,4 @@ Se utilizaron las siguientes librerías:
 
 ## Expresiones de Gratitud 🎁
 
-Estoy totalmente agradecido a Coderhouse por la oportunidad de seguir aprendiendo y sumar herramientas; y a mi espléndido profesor **Álex Marín Méndez** - [Alex](https://github.com/alexmarinmendez) por las excelentes clases, su manera de enseñar y compartir su conociemiento y experiencia me han enriquecido mucho :raised_hands:
+Estoy totalmente agradecido a Coderhouse por la oportunidad de seguir aprendiendo y sumar herramientas; y a mi espléndido profesor **Álex Marín Méndez** - [Alex](https://github.com/alexmarinmendez) por las excelentes clases, su manera de enseñar y compartir su conociemiento y experiencia me han enriquecido :raised_hands:
