@@ -2,6 +2,8 @@
 
 Este proyecto es un sitio web desarrollado como trabajo final para el curso de React en Coderhouse. El mismo es un ecommerce donde se puede comprar ropa deportiva de equipos de básquet de la NBA.
 
+Deploy: [Pick & Roll](https://pickandroll.netlify.app/)
+
 ![](https://media.giphy.com/media/gQdHWEKSJQ5RlF9roN/giphy.gif)
 
 La finalidad de este sitio es la de ofrecer productos y que el usuario pueda tener una experiencia de compra real (sin pasarela de pagos). Consta de una tienda con 3 secciones donde se pueden ver los distintos productos, los cuales están alojados en una base de datos (Firebase).
