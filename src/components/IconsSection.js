@@ -14,7 +14,7 @@ const IconSection = () => {
 
     return (
         <section className="icon_section">
-            <div /* className="container" */>
+            <div>
                 <div className="d-flex justify-content-center flex-wrap" data-aos="fade-up">
                     <div className="icon_margin">
                         <FontAwesomeIcon icon={faTruck} className="icon_color"/>

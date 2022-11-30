@@ -17,7 +17,7 @@ body {
 /* NAVBAR */
 .navbar_bg {
   background-color: #0a0a0c;
-  height: 6rem; /* Achico navbar para que pueda entrar el banner */
+  height: 6rem; /* Achico navbar para que pueda entrar el banner completo*/
 }
 
 .navbar_bg-store {
@@ -800,6 +800,10 @@ footer {
 }
 
 @media (max-width: 900px) {
+  body {
+    overflow-x: hidden!important; 
+  }
+
   .us_section {
     height: auto;
   }
