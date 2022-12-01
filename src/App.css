@@ -333,11 +333,11 @@ li a:hover .basket-ball {
 .button_container span {
   position: absolute;
   font-size: 2rem;
-  margin-right: 20px;
+  margin-left: 10px;
 }
 
 .button_container :last-child {
-  margin-left: 35px;
+  margin-left: 55px;
 }
 
 .button_plus-minus {
@@ -849,6 +849,9 @@ footer {
   .button_finish {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  .button_container span {
+    margin-top: -4px;
   }
 }
 
