@@ -6,32 +6,16 @@ import { CartContext } from "./CartContext";
 import ReactImageMagnify from "react-image-magnify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(1);
     const [goCart, setGoCart] = useState(false);
-    const { addToCart } = useContext(CartContext);
-
-    const notification = () => {
-        toast.success("Producto agregado al carrito", {
-            position: "top-right",
-            autoClose: 3200,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
-    }
+    const { addToCart, ToastContainer } = useContext(CartContext);
 
     const onAdd = (quantityToAdd) => {
         setItemCount(quantityToAdd);
         addToCart(item, quantityToAdd);
         setGoCart(true);
-        notification();
     }
 
     return(

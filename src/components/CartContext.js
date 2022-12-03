@@ -1,10 +1,38 @@
 import { createContext } from "react";
 import { useLocalStorage } from "../utilities/useLocalStorage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext();
 
 const CartContextProvider = (props) => {
     const [cartList, setCartList] = useLocalStorage("item", []);;
+
+    const notificationSuccess = () => {
+        toast.success("Producto agregado al carrito", {
+            position: "top-right",
+            autoClose: 3200,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+    }
+
+    const notificationError = () => {
+        toast.error("No hay suficiente stock", {
+            position: "top-right",
+            autoClose: 3200,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+    }
 
     const addToCart = (item, quantityToAdd) => {
         let find = cartList.find(elem => elem.idItem === item.id);
@@ -15,10 +43,15 @@ const CartContextProvider = (props) => {
                     imgItem: item.pictureUrl,
                     nameItem: item.title,
                     priceItem: item.price,
+                    stockItem: item.stock,
                     qtyItem: quantityToAdd
                 }]);
+                notificationSuccess();
+        } else if ((find.qtyItem + quantityToAdd) <= find.stockItem) {
+            find.qtyItem += quantityToAdd;   
+            notificationSuccess();
         } else {
-            find.qtyItem += quantityToAdd;        
+            notificationError();
         }
     }
 
@@ -51,7 +84,7 @@ const CartContextProvider = (props) => {
     }
 
     return(
-        <CartContext.Provider value={{cartList, addToCart, clearList, removeItem, calcItemsQty, calcTotalPerItem, sumProducts}}>
+        <CartContext.Provider value={{cartList, addToCart, clearList, removeItem, calcItemsQty, calcTotalPerItem, sumProducts, ToastContainer}}>
             {props.children}
         </CartContext.Provider>
     )
