@@ -30,7 +30,6 @@ Se utilizaron las siguientes librerías:
 * Bootstrap (clases de estilo).
 * FontAwesome (iconos).
 * AOS (animaciones aplicadas al Home).
-* Gh-Pages (deploy github pages).
 * Firebase (base de datos en la nube).
 * React-router-dom (enlazar los componentes).
 * React-hook-form (validar los datos del formulario y poder trabajar con ellos).
