@@ -1,6 +1,6 @@
 # Ecommerce React - "Pick & Roll Tienda Deportiva"
 
-Este proyecto es un sitio web desarrollado como trabajo final para el curso de React en Coderhouse. El mismo es un ecommerce donde se puede comprar ropa deportiva de equipos de básquet de la NBA.
+Este proyecto es una aplicación web desarrollada como estudio para sumar conocimientos y nuevas herramientas. El mismo es un ecommerce donde se puede comprar ropa deportiva de equipos de básquet de la NBA.
 
 Deploy: [Pick & Roll](https://pickandroll.netlify.app/)
 
@@ -36,9 +36,3 @@ Se utilizaron las siguientes librerías:
 * React-image-magnify (libreria que realiza un zoom cuando se hace hover sobre la imagen en el componente ItemDetail).
 * React-toastify (notificación al agregar producto al carrito).
 * SweetAlert (alerta al finalizar la compra).
-
-
-
-## Expresiones de Gratitud 🎁
-
-Estoy totalmente agradecido a Coderhouse por la oportunidad de seguir aprendiendo y sumar herramientas; y a mi espléndido profesor **Álex Marín Méndez** - [Alex](https://github.com/alexmarinmendez) por las excelentes clases, su manera de enseñar y compartir su conociemiento y experiencia me han enriquecido :raised_hands:
